@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello World Extension</title>
+  <style>
+    body {
+      width: 300px;
+      height: 250px;
+      padding: 0;
+      font-family: 'Nunito Sans', sans-serif; /* Use Nunito Sans */
+      margin: 0; /* Remove default margin */
+      border: 0.5px solid black; /* Add border around the extension */
+      border-radius: 10px; /* Add rounded edges */
+      overflow: hidden; /* Ensure content doesn't overflow */
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+
+    .popup-content {
+      padding: 10px; /* Add padding */
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 5px; /* Adjusted margin */
+    }
+
+    .header img {
+      width: 15px;
+      height: 15px;
+      margin-right: 5px;
+    }
+
+    .header .name {
+      font-weight: bold;
+      font-family: 'Stylish', sans-serif; /* Use Stylish font for the header */
+      color: green;
+      font-size: 20px;
+      margin-right: 5px; /* Add a small gap on the right side of the name */
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80%; /* 80% of the height */
+    }
+
+    .left-content {
+      width: calc(60% - 10px); /* Adjusted width for left content */
+      text-align: left;
+      margin-right: 10px;
+    }
+
+    .left-content .name {
+      font-family: 'Nunito Sans', sans-serif; /* Use Nunito Sans for Zesica */
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 20px; /* Add space between the first line and Zesica */
+    }
+
+    .right-content {
+      width: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .right-content img {
+      width: 15px;
+      height: 15px;
+      margin-left: 5px;
+    }
+
+    .right-content .main-image {
+      width: 100px;
+      height: 100px;
+    }
+
+    .red-text {
+      color: red;
+      margin-right: 5px; /* Add a small gap on the right side of the red text */
+    }
+  </style>
+</head>
+<body>
+  <div class="popup-content">
+    <div class="header">
+      <img src="placeholder-image-url.png" alt="Placeholder Image">
+      <div>
+        <div class="name">Sustain</div>
+      </div>
+      <div class="right-content">
+        <img src="shopping-icon-url.png" alt="Shopping Icon" style="color: green;">
+        <img src="profile-icon-url.png" alt="Profile Icon" style="color: green;">
+        <img src="third-icon-url.png" alt="Third Icon" style="color: green;">
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="left-content">
+        <div class="name">Zesica</div>
+        <div class="description">Zesica is renowned for its commitment to ecofriendliness, employing sustainable practices and materials in their fashion products to minimize their environmental impact, making it a preferred choice for eco-conscious consumers.</div>
+      </div>
+
+      <div class="right-content">
+        <img src="image-url.png" alt="Image" class="main-image">
+      </div>
+    </div>
+  </div>
+
+  <!-- Add empty space (adjust margin-top as needed) -->
+  <div style="margin-top: 20px;"></div>
+</body>
+</html>

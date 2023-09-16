@@ -1,21 +1,10 @@
 {
-    "name": "Exchange Rates",
+    "manifest_version": 3,
+    "name": "Hello World Extension",
     "version": "1.0",
-    "manifest_version": 2,
-    "description": "Extension that datermines an Amazon clothing seller's sustainability",
-    "version": "1.0",
-    "icons": {
-        "16": "",
-        "48": "",
-        "128": ""
-    },
-    "page_action": {
-        "default_icon": {
-            "16": "",
-            "48": "",
-            "128": ""
-        }
-    },
-    "content_scripts": [{}]
-
-}
+    "description": "A simple hello world extension",
+    "permissions": ["activeTab"],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
