@@ -1,5 +1,6 @@
 import './App.css';
 import Analytics from "./pages/Analytics.js";
+import Points from "./pages/Points.js";
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -25,7 +26,7 @@ function App() {
       <Box component="main" sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }} >
 
         <div>
-      <Analytics/>
+      <Points/>
         </div>
 
 
