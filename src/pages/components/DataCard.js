@@ -19,15 +19,16 @@ export default function DataCard() {
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          Top Sellers
+        <Typography sx={{ fontSize: 20 }} color="text.secondary" gutterBottom>
+          Your Top Sellers This Month
         </Typography>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+        <Typography sx={{ fontSize: 15 }} color="text.secondary" gutterBottom>
           <ul>
             <li>H&M</li>
             <li>Forever21</li>
             <li>Shien</li>
-            <li>Etsy</li>
+            <li>Fashion Nova</li>
+            <li>Ebay</li>
           </ul>
         </Typography>
       </CardContent>

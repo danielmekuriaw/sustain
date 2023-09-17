@@ -23,43 +23,29 @@ import SideNavBar from './components/SideNavBar.js';
 
 const drawerWidth = 240;
 
-export default function Home() {
+export default function Analytics() {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
 
-      <SideNavBar/>
       
-      <Box
-        component="main"
-        sx={{ flexGrow: 1, bgcolor: 'background.default'}}
-      >
-          <div>
-        <AppTopBar/>
-          </div>
+      <Box component="main" sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }} >
 
-
-        <Box
-        component="main"
-        sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}
-        >
 
           <Typography variant="h3">
             Analytics
           </Typography>
+          
+          <Box component="main" sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }} >
 
-          <Box
-            component="main"
-            sx={{ bgcolor: 'background.default', p: 3 }}
-          >
             <div>
             <InfoGrid/>
             </div>
+
           </Box>
 
-
-        </Box>
       </Box>
+        
     </Box>
   );
 }

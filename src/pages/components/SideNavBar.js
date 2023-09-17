@@ -41,36 +41,36 @@ export default function SideNavBar() {
             <ListItem key={"Home"} disablePadding>
                 <ListItemButton>
                     <ListItemIcon>
-                        <HomeIcon />   
+                        <HomeIcon style={{ color: "#468226" }}/>   
                     </ListItemIcon>
-                    <ListItemText primary={"Home"} />
+                    <ListItemText style={{ color: "#468226" }} primary={"Home"} />
                 </ListItemButton>
             </ListItem>
 
             <ListItem key={"Analytics"} disablePadding>
                 <ListItemButton>
                     <ListItemIcon>
-                        <AnalyticsIcon />   
+                        <AnalyticsIcon style={{ color: "#468226" }}/>   
                     </ListItemIcon>
-                    <ListItemText primary={"Analytics"} />
+                    <ListItemText style={{ color: "#468226" }} primary={"Analytics"} />
                 </ListItemButton>
             </ListItem>
 
             <ListItem key={"Points"} disablePadding>
                 <ListItemButton>
                     <ListItemIcon>
-                        <PointsIcon />   
+                        <PointsIcon style={{ color: "#468226" }}/>   
                     </ListItemIcon>
-                    <ListItemText primary={"Points"} />
+                    <ListItemText style={{ color: "#468226" }} primary={"Points"} />
                 </ListItemButton>
             </ListItem>
 
             <ListItem key={"Profile"} disablePadding>
                 <ListItemButton>
                     <ListItemIcon>
-                        <ProfileIcon />   
+                        <ProfileIcon style={{ color: "#468226" }}/>   
                     </ListItemIcon>
-                    <ListItemText primary={"Profile"} />
+                    <ListItemText style={{ color: "#468226" }} primary={"Profile"} />
                 </ListItemButton>
             </ListItem>
 

@@ -61,7 +61,7 @@ export default function AppTopBar() {
               <SearchIcon style={{ color: 'gray' }}/>
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Search"
+              placeholder="Search Sellers"
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>

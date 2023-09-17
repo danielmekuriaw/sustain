@@ -1,15 +1,38 @@
 import './App.css';
-import Home from "./pages/Home.js";
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import Analytics from "./pages/Analytics.js";
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import CssBaseline from '@mui/material/CssBaseline';
+import AppTopBar from "./pages/components/AppTopBar.js";
+import SideNavBar from './pages/components/SideNavBar.js';
 
 
 function App() {
   return (
-          <div>
-            <Home/>
-          </div>
+
+    <Box sx={{ display: 'flex' }}>
+    <CssBaseline />
+
+    <SideNavBar/>
+    
+    <Box component="main" sx={{ flexGrow: 1, bgcolor: 'background.default'}} >
+
+        <div>
+      <AppTopBar/>
+        </div>
+
+
+      <Box component="main" sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }} >
+
+        <div>
+      <Analytics/>
+        </div>
+
+
+      </Box>
+    </Box>
+  </Box>
+
   );
 }
 
