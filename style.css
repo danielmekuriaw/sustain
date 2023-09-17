@@ -1,0 +1,25 @@
+body {
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  min-width: 300px;
+  min-height: 250px;
+  margin: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: 30px 20px 150px;
+  grid-gap: 10px;
+}
+
+.row1 {
+  background-color: #e0e0e0;
+}
+
+.row2 {
+  background-color: #c0c0c0;
+}
+
+.row3 {
+  background-color: #a0a0a0;
+}

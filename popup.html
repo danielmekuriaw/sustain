@@ -2,153 +2,199 @@
 <html>
 <head>
   <title>Hello World Extension</title>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet"> -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=FAMILY_NAME:wght@WEIGHT_OR_RANGE&display=swap" rel="stylesheet">
   <style>
-    body {
-      width: 300px;
-      height: 250px;
-      padding: 0;
-      font-family: 'Nunito Sans', sans-serif; /* Use Nunito Sans */
-      margin: 0; /* Remove default margin */
-      border: 0.5px solid black; /* Add border around the extension */
-      border-radius: 10px; /* Add rounded edges */
-      overflow: hidden; /* Ensure content doesn't overflow */
-    }
 
-    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
 
-    .popup-content {
-      padding: 10px; /* Add padding */
-    }
+body {
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  min-width: 300px;
+  min-height: 250px;
+  margin: 0;
+  /* font: Nunito Sans; */
+  font-family: 'Nunito Sans', sans-serif;
+  /* background-color: red; */
+}
 
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 10px; /* Adjusted margin, 2 lines */
-    }
 
-    .header img {
-      width: 15px;
-      height: 15px;
-      margin-right: 5px;
-    }
 
-    .header .name {
+.grid-container {
+  display: grid;
+  grid-template-rows: 30px 20px 180px;
+  grid-gap: 10px;
+}
+
+.row1 {
+  display: grid;
+  grid-template-columns: auto auto auto; /* Three columns */
+  align-items: center;
+  /* background-color: #e0e0e0; */
+  padding: 5px;
+}
+
+.column1 {
+  grid-column: 1;
+  width: 15px;
+}
+
+.column2 {
+  grid-column: 2;
+}
+
+.column3 {
+  grid-column: 3;
+  display: flex;
+  justify-content: flex-end; /* Align to the right */
+}
+
+.icon {
+  width: 15px;
+  height: 15px;
+}
+
+.small-icon {
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+}
+.name{
       font-weight: bold;
-      font-family: 'Stylish', sans-serif; /* Use Stylish font for the header */
-      color: green;
+      color: 85A865;
+      color: #85A865;
+font-family: Stylish;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
       font-size: 20px;
-      margin-right: 5px; /* Add a small gap on the right side of the name */
-    }
+      margin-right: 10px; /* Add a small gap on the right side of the name */
+      margin-left:5px;
+}
+.row2 {
+  /* background-color: #c0c0c0; */
+  color: #000;
+font-family: Nunito;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-top: 10px;
+}
 
-    .content {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 80%; /* 80% of the height */
-    }
+.row3 {
+  /* background-color: #a0a0a0; */
+  display: grid;
+  grid-template-columns: 4fr 5fr;
+  /* padding: 5px; */
+}
 
-    .left-content {
-      width: calc(60% - 10px); /* Adjusted width for left content */
-      text-align: left;
-      margin-right: 10px;
-    }
+.r3col1 {
+  grid-column: 4;
+  /* background-color: red; */
+  width: 120px;
+}
 
-    .left-content .name {
-      font-family: 'Nunito Sans', sans-serif; /* Use Nunito Sans for Zesica */
-      font-weight: bold;
-      font-size: 18px;
-      margin-bottom: 20px; /* Add space between the header and Zesica */
-    }
+.r3col2 {
+  grid-column: 5; /* Changed grid-column to 2 for the second column */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-color: blue; */
+  width: 180px;
+}
 
-    .right-content {
-      width: 40%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-    }
+.paragrph{
+  color: #000;
+font-family: Nunito;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
 
-    .right-content img {
-      width: 15px;
-      height: 15px;
-      margin-left: 5px;
-    }
-
-    .right-content .main-image {
+.progress-circle {
       width: 100px;
       height: 100px;
     }
- 
-    .progress-circle {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: none;
-  position: relative;
-  margin: 0 auto;
-  border: 10px solid #f3f3f3;
+
+    .progress-circle svg {
+      transform: rotate(-90deg);
+    }
+
+    .progress-circle circle {
+      fill: none;
+      stroke: #A65D50;
+      stroke-width: 10;
+      stroke-linecap: round;
+      transform-origin: center;
+      animation: progress 2s ease-out forwards;
+    }
+
+    .progress-circle .progress {
+  stroke-dasharray: 157; /* Half the circumference of a circle with radius 40 (2 * pi * r) */
+  stroke-dashoffset: -78.5; /* -50% of the circumference */
 }
 
-.progress-circle svg {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-
-.progress-circle .progress {
-  fill: none;
-  stroke: #4caf50;
-  stroke-width: 10;
-  stroke-dasharray: 251.2;
-  stroke-dashoffset: calc(251.2 - (251.2 * (var(--progress) / 100)));
-  animation: progress-animation 2s forwards;
-}
-
-@keyframes progress-animation {
-  from {
-    stroke-dashoffset: 251.2;
-  }
-  to {
-    stroke-dashoffset: calc(251.2 - (251.2 * (var(--progress) / 100)));
-  }
-}
+    @keyframes progress {
+      from {
+        stroke-dasharray: 0, 1000;
+      }
+      to {
+        stroke-dasharray: 400, 1000;
+      }
+    }
 
 
   </style>
 </head>
 <body>
-  <div class="popup-content">
-    <div class="header">
-      <img src="placeholder-image-url.png" alt="Placeholder Image">
-      <div>
-        <div class="name">Sustain</div>
+
+  <div class="grid-container">
+    <div class="row1">
+      <div class="column1">
+        <img src="icon.png" alt="Icon" class="icon">
       </div>
-      <div class="right-content">
-        <img src="shopping-icon-url.png" alt="Shopping Icon" style="color: green;">
-        <img src="profile-icon-url.png" alt="Profile Icon" style="color: green;">
-        <img src="third-icon-url.png" alt="Third Icon" style="color: green;">
+      <div class="column2">
+        <span class="name">Sustain</span>
+      </div>
+      <div class="column3">
+        <img src="icon.png" alt="Image 1" class="small-icon">
+        <img src="icon.png" alt="Image 2" class="small-icon">
+        <img src="icon.png" alt="Image 3" class="small-icon">
       </div>
     </div>
-
-    <div class="content">
-      <div class="left-content">
-        <div class="name">Zesica</div>
-        <div class="description">Zesica is renowned for its commitment to ecofriendliness, employing sustainable practices and materials in their fashion products to minimize their environmental impact, making it a preferred choice for eco-conscious consumers.</div>
+    <div class="row2">Zesica</div>
+    <div class="row3">
+      <div class="r3col1">
+        <p class="paragrph">
+          Zesica is renowned for its commitment to ecofriendliness, employing sustainable practices and materials in their fashion products to minimize their environmental impact, making it a preferred choice for eco-conscious consumers.
+        </p>
       </div>
-
-      <div class="right-content">
-        <div class="progress-circle" data-progress="50">
-          <!-- <svg viewBox="0 0 100 100"> -->
-          <svg>
-            <circle class="progress" cx="50%" cy="50%" r="40%"></circle>
+      <div class="r3col2">
+        <div style="color:A65D50">
+          Ecofriendly Score
+        </div>
+        <br>
+        <div class="progress-circle">
+          <svg viewBox="0 0 100 100">
+            <circle class="progress" cx="50" cy="50" r="40"></circle>
           </svg>
         </div>
-        
+        <br>
+        <br>
+        <div style="color: A65D50">
+          Materials: 5.5/10
+          <br>
+          ESG Rating: 55
+        </div>
+      </div>
     </div>
   </div>
-
-  <!-- Add empty space (adjust margin-top as needed) -->
-  <div style="margin-top: 20px;"></div>
 </body>
 </html>
