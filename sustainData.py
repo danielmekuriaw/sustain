@@ -4,6 +4,9 @@ import openai
 import os
 from metaphor_python import Metaphor
 from urllib.request import urlopen
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
 
 openai.api_key = os.environ.get('OPENAI_API_KEY')
 FINANCIAL_MODELING_API_KEY = os.environ.get('FINANCIAL_MODELING_API_KEY')
@@ -67,10 +70,27 @@ def get_company_summary(company_name):
     combined_summary = completion.choices[0].message.content
     return combined_summary
 
-company_name = input()
-stock_symbol = get_stock_symbol(company_name)
-print(stock_symbol)
-print('')
-print(get_esg_data(stock_symbol))
-print('')
-print(get_company_summary(company_name))
+@app.route('/info/<company_name>', methods=['GET'])
+def info(company_name):
+    stock_symbol = get_stock_symbol(company_name)
+    esg_data = get_esg_data(stock_symbol)
+    
+    esg_data = esg_data[0]
+    
+    esg_score = esg_data["ESGScore"]
+    environmental_score = esg_data["environmentalScore"]
+    governance_score = esg_data["governanceScore"]
+    social_score = esg_data["socialScore"]
+    
+    company_summary = get_company_summary(company_name)
+    
+    return jsonify({
+        "company_summary" : company_summary,
+        "esg_score": esg_score,
+        "environmental_score": environmental_score,
+        "governance_score": governance_score,
+        "social_score": social_score
+    })
+
+if __name__ == "__main__":
+    app.run(debug=True)
