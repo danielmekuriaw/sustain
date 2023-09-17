@@ -19,19 +19,16 @@ export default function InfoCard() {
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+        <Typography sx={{ fontSize: 30 }} color="text.secondary" align="center"gutterBottom>
           Average ESG Score
         </Typography>
-        <Typography sx={{ fontSize: 70 }} color="text.secondary" gutterBottom>
+        <Typography sx={{ fontSize: 70 }} color="text.secondary" align="center" gutterBottom>
           76
         </Typography>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          5 increase from one month ago
+        <Typography sx={{ fontSize: 14 }} color="text.secondary" align="center" gutterBottom>
+          That's a 5% increase from one month ago!
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
     </Card>
   );
 }
