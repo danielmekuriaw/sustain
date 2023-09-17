@@ -18,12 +18,14 @@ import AnalyticsIcon from '@mui/icons-material/Leaderboard';
 import AppTopBar from "./components/AppTopBar.js";
 import InfoCard from "./components/InfoCard.js";
 import InfoGrid from "./components/InfoGrid.js";
+import HomeCard from "./components/HomeCard.js";
 import { NavLink } from 'react-router-dom';
 
 const drawerWidth = 240;
 
-export default function Analytics() {
+export default function Home() {
   return (
+
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
 
@@ -32,13 +34,13 @@ export default function Analytics() {
 
 
           <Typography variant="h3">
-            Analytics
+            Your Eco Stats
           </Typography>
           
           <Box component="main" sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }} >
 
             <div>
-            <InfoGrid/>
+            <HomeCard/>
             </div>
 
           </Box>

@@ -20,11 +20,10 @@ import InfoCard from "./components/InfoCard.js";
 import InfoGrid from "./components/InfoGrid.js";
 import PointsCard from "./components/PointsCard.js";
 import { NavLink } from 'react-router-dom';
-import SideNavBar from './components/SideNavBar.js';
 
 const drawerWidth = 240;
 
-export default function Analytics() {
+export default function Points() {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
