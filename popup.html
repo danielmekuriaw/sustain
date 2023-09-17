@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Hello World Extension</title>
   <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> -->
@@ -7,118 +8,123 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=FAMILY_NAME:wght@WEIGHT_OR_RANGE&display=swap" rel="stylesheet">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
-
-body {
-  padding: 10px;
-  font-family: Arial, sans-serif;
-  min-width: 300px;
-  min-height: 250px;
-  margin: 0;
-  /* font: Nunito Sans; */
-  font-family: 'Nunito Sans', sans-serif;
-  /* background-color: red; */
-}
-
+    body {
+      padding: 30px;
+      font-family: Arial, sans-serif;
+      min-width: 320px;
+      min-height: 480px;
+      margin: 0;
+      /* font: Nunito Sans; */
+      font-family: 'Nunito Sans', sans-serif;
+      /* background-color: red; */
+    }
 
 
-.grid-container {
-  display: grid;
-  grid-template-rows: 30px 20px 180px;
-  grid-gap: 10px;
-}
 
-.row1 {
-  display: grid;
-  grid-template-columns: auto auto auto; /* Three columns */
-  align-items: center;
-  /* background-color: #e0e0e0; */
-  padding: 5px;
-}
+    .grid-container {
+      display: grid;
+      grid-template-rows: 30px 20px 180px 180px;
+      grid-gap: 10px;
+    }
 
-.column1 {
-  grid-column: 1;
-  width: 15px;
-}
+    .row1 {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      /* Three columns */
+      align-items: center;
+      /* background-color: #e0e0e0; */
+      /* padding: 5px; */
+    }
 
-.column2 {
-  grid-column: 2;
-}
+    .column1 {
+      grid-column: 1;
+      width: 15px;
+    }
 
-.column3 {
-  grid-column: 3;
-  display: flex;
-  justify-content: flex-end; /* Align to the right */
-}
+    .column2 {
+      grid-column: 2;
+    }
 
-.icon {
-  width: 15px;
-  height: 15px;
-}
+    .column3 {
+      grid-column: 3;
+      display: flex;
+      justify-content: flex-end;
+      /* Align to the right */
+    }
 
-.small-icon {
-  width: 15px;
-  height: 15px;
-  margin-left: 5px;
-}
-.name{
+    .icon {
+      width: 15px;
+      height: 15px;
+    }
+
+    .small-icon {
+      width: 15px;
+      height: 15px;
+      margin-left: 5px;
+    }
+
+    .name {
       font-weight: bold;
       color: 85A865;
       color: #85A865;
-font-family: Stylish;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+      font-family: Stylish;
       font-size: 20px;
-      margin-right: 10px; /* Add a small gap on the right side of the name */
-      margin-left:5px;
-}
-.row2 {
-  /* background-color: #c0c0c0; */
-  color: #000;
-font-family: Nunito;
-font-size: 18px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-margin-top: 10px;
-}
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      font-size: 20px;
+      margin-right: 10px;
+      /* Add a small gap on the right side of the name */
+      margin-left: 5px;
+    }
 
-.row3 {
-  /* background-color: #a0a0a0; */
-  display: grid;
-  grid-template-columns: 4fr 5fr;
-  /* padding: 5px; */
-}
+    .row2 {
+      /* background-color: #c0c0c0; */
+      color: #000;
+      font-family: Nunito;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      margin-top: 10px;
+    }
 
-.r3col1 {
-  grid-column: 4;
-  /* background-color: red; */
-  width: 120px;
-}
+    .row3 {
+      /* background-color: #a0a0a0; */
+      display: grid;
+      grid-template-columns: 140fr 180fr;
+      /* padding: 5px; */
+    }
 
-.r3col2 {
-  grid-column: 5; /* Changed grid-column to 2 for the second column */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* background-color: blue; */
-  width: 180px;
-}
+    .r3col1 {
+      grid-column: 4;
+      /* background-color: red; */
+      width: 140px;
+    }
 
-.paragrph{
-  color: #000;
-font-family: Nunito;
-font-size: 13px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-}
+    .r3col2 {
+      grid-column: 5;
+      /* Changed grid-column to 2 for the second column */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* background-color: blue; */
+      width: 180px;
+    }
 
-.progress-circle {
+    .paragrph {
+      color: #000;
+      font-family: Nunito;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .progress-circle {
       width: 100px;
       height: 100px;
     }
@@ -137,22 +143,66 @@ line-height: normal;
     }
 
     .progress-circle .progress {
-  stroke-dasharray: 157; /* Half the circumference of a circle with radius 40 (2 * pi * r) */
-  stroke-dashoffset: -78.5; /* -50% of the circumference */
-}
+      stroke-dasharray: 157;
+      /* Half the circumference of a circle with radius 40 (2 * pi * r) */
+      stroke-dashoffset: -78.5;
+      /* -50% of the circumference */
+    }
 
     @keyframes progress {
       from {
         stroke-dasharray: 0, 1000;
       }
+
       to {
         stroke-dasharray: 400, 1000;
       }
     }
 
+    .row4 {
+      /* background-color: #a0a0a0; */
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-top: 20px;
+      height: 200px;
+      /* padding: 5px; */
+    }
 
+    .r4col1 {
+      grid-column: 6;
+      /* Changed grid-column to 2 for the second column */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* background-color: blue; */
+      width: 110px;
+    }
+
+    .r4col2 {
+      grid-column: 7;
+      /* Changed grid-column to 2 for the second column */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* background-color: blue; */
+      width: 110px;
+    }
+
+    .r4col3 {
+      grid-column: 8;
+      /* Changed grid-column to 2 for the second column */
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      justify-content: center;
+      /* background-color: blue; */
+      width: 105px;
+    }
   </style>
 </head>
+
 <body>
 
   <div class="grid-container">
@@ -173,7 +223,9 @@ line-height: normal;
     <div class="row3">
       <div class="r3col1">
         <p class="paragrph">
-          Zesica is renowned for its commitment to ecofriendliness, employing sustainable practices and materials in their fashion products to minimize their environmental impact, making it a preferred choice for eco-conscious consumers.
+          Zesica is renowned for its commitment to ecofriendliness, employing sustainable practices and materials in
+          their fashion products to minimize their environmental impact, making it a preferred choice for eco-conscious
+          consumers.
         </p>
       </div>
       <div class="r3col2">
@@ -195,6 +247,38 @@ line-height: normal;
         </div>
       </div>
     </div>
-  </div>
+    <div class="row4">
+      <!--3 columns of names r4col1...-->
+      <div class="r4col1">
+        <div class="progress-circle">
+          <svg viewBox="0 0 100 100">
+            <circle class="progress" cx="50" cy="50" r="40"></circle>
+          </svg>
+        </div>
+        <br>
+        <div style="color: A65D50">Social Rating: 5.5/10</div>
+      </div>
+
+      <div class="r4col2">
+        <div class="progress-circle">
+          <svg viewBox="0 0 100 100">
+            <circle class="progress" cx="50" cy="50" r="40"></circle>
+          </svg>
+        </div>
+        <br>
+        <div style="color: A65D50">Social Rating: 5.5/10</div>
+      </div>
+      <div class="r4col3">
+        <div class="progress-circle">
+          <svg viewBox="0 0 100 100">
+            <circle class="progress" cx="50" cy="50" r="40"></circle>
+          </svg>
+        </div>
+        <br>
+        <div style="color: A65D50">Social Rating: 5.5/10</div>
+      </div>
+      </div>
+    </div>
 </body>
+
 </html>
