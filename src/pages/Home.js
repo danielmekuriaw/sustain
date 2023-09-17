@@ -11,46 +11,24 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
-import AppTopBar from "./AppTopBar.js";
-import InfoCard from "./InfoCard.js";
-import InfoGrid from "./InfoGrid.js";
+import HomeIcon from '@mui/icons-material/Home';
+import ProfileIcon from '@mui/icons-material/AccountBox';
+import PointsIcon from '@mui/icons-material/ShoppingBag';
+import AnalyticsIcon from '@mui/icons-material/Leaderboard';
+import AppTopBar from "./components/AppTopBar.js";
+import InfoCard from "./components/InfoCard.js";
+import InfoGrid from "./components/InfoGrid.js";
+import { NavLink } from 'react-router-dom';
+import SideNavBar from './components/SideNavBar.js';
 
 const drawerWidth = 240;
 
-export default function PermanentDrawerLeft() {
+export default function Home() {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
 
-      <Drawer
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          '& .MuiDrawer-paper': {
-            width: drawerWidth,
-            boxSizing: 'border-box',
-          },
-        }}
-        variant="permanent"
-        anchor="left"
-      >
-        <Toolbar />
-        <Divider />
-        <List>
-          {['Home', 'Analytics', 'Points', 'Profile'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
+      <SideNavBar/>
       
       <Box
         component="main"

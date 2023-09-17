@@ -1,5 +1,5 @@
 import './App.css';
-import SideNavBar from "./components/SideNavBar.js";
+import Home from "./pages/Home.js";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -8,7 +8,7 @@ import Col from 'react-bootstrap/Col';
 function App() {
   return (
           <div>
-            <SideNavBar/>
+            <Home/>
           </div>
   );
 }
